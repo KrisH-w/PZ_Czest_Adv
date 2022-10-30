@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import { Autocomplete } from "@react-google-maps/api";
 import { AppBar,Toolbar, Typography, InputBase, Box, InputLabel, MenuItem, FormControl, Select, Input } from "@material-ui/core";
 import searchIcon from '@material-ui/icons/Search';
-import useStyles from './styles';
+import useStyles from './HeaderStyles';
+
 const Header = () => {
     const classes = useStyles();
     const [typ, setTyp] = useState('atrakcje');
@@ -13,7 +14,6 @@ const Header = () => {
                 <Typography variant="h5" className={classes.toolbar}>
                     Projekt Zespolowy
                 </Typography>
-                <img src="Icons\Png\Logo.png" height="100%"></img>
                 <Box display="flex">
                     <Typography variant="h6" className={classes.toolbar}>
                     </Typography>
@@ -26,8 +26,27 @@ const Header = () => {
                         </div>
                     {/* </Autocomplete> */}
                 </Box>
+                <img src="Icons\Png\Logo.png" height="100%"></img>
+                
+                <FormControl className={classes.formControl}>
+                    <InputLabel>Typ</InputLabel>
+                    <Select value={typ} onChange={(e) => setTyp(e.target.value)}>
+                        <MenuItem value="restauracje">Restauracje</MenuItem>
+                        <MenuItem value="hotele">Hotele</MenuItem>
+                        <MenuItem value="atrakcje">Atrakcje</MenuItem>
+                    </Select>
+                </FormControl>
+                <FormControl className={classes.formControl}>
+                    <InputLabel>Ocena</InputLabel>
+                    <Select value={ocen} onChange={(e) => setOcen(e.target.value)}>
+                        <MenuItem value="0">All</MenuItem>
+                        <MenuItem value="3">Powyzej 3.0</MenuItem>
+                        <MenuItem value="4">Powyzej 4.0</MenuItem>
+                        <MenuItem value="4.5">Powyzej 4.5</MenuItem>
+                    </Select>
+                </FormControl>
             </Toolbar>
         </AppBar>
-    )
+    );
 }
 export default Header;
