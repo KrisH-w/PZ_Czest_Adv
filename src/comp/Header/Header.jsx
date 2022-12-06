@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { Autocomplete } from "@react-google-maps/api";
 import { AppBar,Toolbar, Typography, InputBase, Box, InputLabel, MenuItem, FormControl, Select, Input } from "@material-ui/core";
 import searchIcon from '@material-ui/icons/Search';
@@ -26,7 +26,7 @@ const Header = () => {
                         </div>
                     {/* </Autocomplete> */}
                 </Box>
-                <img src="Icons\Png\Logo.png" height="100%"></img>
+                <img src="./Logo.png" height="100%"></img>
                 
                 <FormControl className={classes.formControl}>
                     <InputLabel>Typ</InputLabel>
