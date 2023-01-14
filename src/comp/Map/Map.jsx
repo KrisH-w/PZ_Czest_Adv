@@ -17,7 +17,7 @@ const Map = ({setCoords, setBounds, coords , places , setChildClicked}) => {
     return(
         <div className={classes.mapContainer}>
             <GoogleMapReact 
-                bootstrapURLKeys={{key: ''}}
+                bootstrapURLKeys={{key: 'AIzaSyA4R1_nRhUEpWyHPnd0XFXEBrIbMJC6d1M'}}
                 defaultCenter={coords}
                 center={coords}
                 defaultZoom={13}
@@ -38,7 +38,7 @@ const Map = ({setCoords, setBounds, coords , places , setChildClicked}) => {
                     lng={Number(place.longitude)}
                     key={i}
                 >
-                    {!matches
+                    {matches
                     ? <LocationOnOutlinedIcon color="primary" fontSize="large" /> : (
                         <Paper elevation={3} className={classes.paper}>
                             <Typography className={classes.typography} variant="subtitle2" gutterBottom> {place.name}</Typography>
@@ -50,7 +50,7 @@ const Map = ({setCoords, setBounds, coords , places , setChildClicked}) => {
                         </Paper>
                     )}
                 </div>
-                ))}
+            ))}
             </GoogleMapReact>
         </div>
     );

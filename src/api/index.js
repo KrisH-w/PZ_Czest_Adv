@@ -9,9 +9,11 @@ export const getPlacesData = async (type, sw, ne) => {
         bl_longitude: sw.lng,
         tr_longitude: ne.lng,
         tr_latitude: ne.lat,
+        currency: "PLN",
+        lang: 'pl',
       },
       headers: {
-        'x-rapidapi-key': '',
+        'x-rapidapi-key': '9419b1eac6msh08c03cc7f358782p117134jsn37a99a54484f',
         'x-rapidapi-host': 'travel-advisor.p.rapidapi.com',
       },
     });

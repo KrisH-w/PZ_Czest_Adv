@@ -61,6 +61,9 @@ const PlaceDetails = ({place, selected, refProp}) => {
                 <Button size="small" color="primary" onClick={() => window.open(place.website, '_blank')}>
                     Strona
                 </Button>
+                <Button size="small" color="primary" onClick={() => window.open(place.website, '_blank')}>
+                    Zglos blad
+                </Button>
             </CardActions>
         </Card>
     );

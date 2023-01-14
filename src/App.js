@@ -25,11 +25,11 @@ const App = () => {
     const [bounds, setBounds] = useState({});
 
 
-    useEffect(() => {
-        navigator.geolocation.getCurrentPosition(({coords: {latitude,longitude} }) => {
-            setCoords({lat: latitude, lng: longitude});
-        })
-    }, []);
+    // useEffect(() => {
+    //     navigator.geolocation.getCurrentPosition(({coords: {latitude,longitude} }) => {
+    //         setCoords({lat: latitude, lng: longitude});
+    //     })
+    // }, []);
 
     
     useEffect(() => {

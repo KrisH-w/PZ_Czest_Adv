@@ -14,18 +14,7 @@ const Header = () => {
                 <Typography variant="h5" className={classes.toolbar}>
                     Projekt Zespolowy
                 </Typography>
-                <Box display="flex">
-                    <Typography variant="h6" className={classes.toolbar}>
-                    </Typography>
-                    {/* <Autocomplete> */}
-                        <div className={classes.search}>
-                            <div className={classes.searchIcon}>
-                                <searchIcon/>
-                            </div>
-                            <InputBase placeholder="Szukaj w Częstochowie" classes={{root:classes.inputRoot, input: classes.inputInput}}></InputBase>
-                        </div>
-                    {/* </Autocomplete> */}
-                </Box>
+                
                 <img src="./Logo.png" height="100%"></img>
                 
                 <FormControl className={classes.formControl}>
